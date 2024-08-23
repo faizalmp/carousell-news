@@ -1,9 +1,7 @@
 package id.faizalempe.carousellnews.data.repository
 
-import id.faizalempe.carousellnews.data.mapper.toNewsList
 import id.faizalempe.carousellnews.data.network.NewsApi
 import id.faizalempe.carousellnews.data.network.NewsResponse
-import id.faizalempe.carousellnews.domain.model.News
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

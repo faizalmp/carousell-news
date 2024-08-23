@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Carousell News</string>
+    <string name="recent">Recent</string>
+    <string name="popular">Popular</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nullam quis ex eu velit convallis commodo. Sed et consectetur tellus.
+        In lobortis libero mauris, sed consectetur urna mollis in.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Proin erat sem, faucibus eget dignissim nec, placerat ac arcu.
+        Quisque a commodo ante. Duis lacinia ultricies dapibus.
+    </string>
 </resources>

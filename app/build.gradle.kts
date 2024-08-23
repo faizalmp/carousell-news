@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.kapt)
 }
 
 android {
@@ -33,13 +35,31 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    hilt {
+        enableAggregatingTask = true
+    }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.runtime)
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
+    implementation(projects.domain)
+    implementation(projects.data)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

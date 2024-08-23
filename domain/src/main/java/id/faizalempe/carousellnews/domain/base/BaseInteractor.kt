@@ -6,7 +6,6 @@ import id.faizalempe.carousellnews.domain.ext.OnSuccess
 import id.faizalempe.carousellnews.domain.ext.OnComplete
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn

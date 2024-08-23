@@ -88,15 +88,10 @@ class NewsActivity : BaseActivity<ActivityNewsBinding>(), NewsUiStateAction {
     }
 
     private fun manageUiState(state: NewsUiState) = when (state) {
-        is NewsUiState.OnSuccess -> doOnSuccess(state.newsList)
         is NewsUiState.OnError -> doOnError(state.error)
         is NewsUiState.OnLoading -> doOnLoading(state.isShow)
         is NewsUiState.OnSorted -> doOnSorted(state.newsList)
         else -> {}
-    }
-
-    override fun doOnSuccess(newsList: List<News>) {
-        newsAdapter.set(newsList)
     }
 
     override fun doOnError(error: Throwable) {

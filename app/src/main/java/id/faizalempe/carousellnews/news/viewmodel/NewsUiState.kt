@@ -6,8 +6,6 @@ sealed class NewsUiState {
 
     object None : NewsUiState()
 
-    class OnSuccess(val newsList: List<News>) : NewsUiState()
-
     class OnError(val error: Throwable) : NewsUiState()
 
     class OnLoading(val isShow: Boolean) : NewsUiState()
@@ -16,8 +14,6 @@ sealed class NewsUiState {
 }
 
 interface NewsUiStateAction {
-
-    fun doOnSuccess(newsList: List<News>)
 
     fun doOnError(error: Throwable)
 

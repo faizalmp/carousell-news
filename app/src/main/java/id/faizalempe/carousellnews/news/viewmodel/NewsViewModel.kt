@@ -2,7 +2,6 @@ package id.faizalempe.carousellnews.news.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dagger.Lazy
 import dagger.hilt.android.lifecycle.HiltViewModel
 import id.faizalempe.carousellnews.domain.interactor.GetNews
 import id.faizalempe.carousellnews.domain.model.News
@@ -14,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NewsViewModel @Inject constructor(
-    private val getNews: Lazy<GetNews>
+    private val getNews: GetNews
 ): ViewModel() {
 
     private val _uiState = MutableStateFlow<NewsUiState>(NewsUiState.None)
@@ -23,7 +22,7 @@ class NewsViewModel @Inject constructor(
     private var news: List<News> = listOf()
 
     fun getNews() {
-        getNews.get().observe(
+        getNews.observe(
             params = GetNews.Params(),
             onStart = { updateUiState(NewsUiState.OnLoading(isShow = true)) },
             onSuccess = { news: List<News> ->

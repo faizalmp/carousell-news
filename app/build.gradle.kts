@@ -60,6 +60,7 @@ dependencies {
     implementation(projects.domain)
     implementation(projects.data)
 
+    testImplementation(libs.mockk)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

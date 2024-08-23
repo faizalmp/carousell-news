@@ -76,8 +76,8 @@ class NewsActivity : BaseActivity<ActivityNewsBinding>(), NewsUiStateAction {
 
     private fun initRecyclerView() {
         binding.rvNews.apply {
-            adapter = newsAdapter
             setItemMargin(getDimen(R.dimen.rv_margin))
+            adapter = newsAdapter
         }
     }
 

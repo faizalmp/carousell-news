@@ -116,6 +116,4 @@ class NewsActivity : BaseActivity<ActivityNewsBinding>(), NewsUiStateAction {
         binding.rvNews.isVisible = true
         newsAdapter.set(newsList)
     }
-
-
 }

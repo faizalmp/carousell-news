@@ -8,7 +8,6 @@ kapt = "2.0.20"
 coreKtx = "1.13.1"
 activityKtx = "1.9.1"
 lifecycle = "2.8.4"
-coroutines = "1.8.1"
 
 # Libs - DI
 hilt = "2.51.1"
@@ -16,7 +15,6 @@ hilt = "2.51.1"
 # Libs - UI
 appcompat = "1.7.0"
 material = "1.12.0"
-constraintLayout = "2.1.4"
 glide = "4.16.0"
 
 # Libs - Network
@@ -36,9 +34,6 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 
 # DI
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -48,7 +43,6 @@ hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref 
 # UI
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
 

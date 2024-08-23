@@ -14,9 +14,10 @@ class GetNewsTest {
     @Test
     fun `build should execute getNews`() {
         // given
+        val params = GetNews.Params()
 
         // when
-        getNews.build(GetNews.Params())
+        getNews.build(params)
 
         // then
         verify { repository.getNews() }

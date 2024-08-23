@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -71,6 +72,7 @@ class NewsActivity : BaseActivity<ActivityNewsBinding>(), NewsUiStateAction {
     }
 
     private fun initViews() {
+        initListener()
         initRecyclerView()
     }
 
@@ -79,6 +81,10 @@ class NewsActivity : BaseActivity<ActivityNewsBinding>(), NewsUiStateAction {
             setItemMargin(getDimen(R.dimen.rv_margin))
             adapter = newsAdapter
         }
+    }
+
+    private fun initListener() {
+        binding.btnRetry.setOnClickListener { vm.getNews() }
     }
 
     private fun observeUiState() {
@@ -95,14 +101,19 @@ class NewsActivity : BaseActivity<ActivityNewsBinding>(), NewsUiStateAction {
     }
 
     override fun doOnError(error: Throwable) {
-        // TODO("Not yet implemented")
+        binding.clError.isVisible = true
     }
 
     override fun doOnLoading(isShow: Boolean) {
-        // TODO("Not yet implemented")
+        binding.pbLoading.isVisible = isShow
+        if (isShow) {
+            binding.rvNews.isVisible = false
+            binding.clError.isVisible = false
+        }
     }
 
     override fun doOnSorted(newsList: List<News>) {
+        binding.rvNews.isVisible = true
         newsAdapter.set(newsList)
     }
 

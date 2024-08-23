@@ -1,6 +1,6 @@
 package id.faizalempe.carousellnews.domain.model
 
-import android.text.format.DateUtils
+
 import java.util.concurrent.TimeUnit
 
 data class News(

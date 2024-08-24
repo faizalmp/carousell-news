@@ -1,14 +1,13 @@
 <resources>
     <!-- Base application theme. -->
     <style name="Theme.CarousellNews" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Primary color -->
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryVariant">@color/dark_red</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
-        <!-- Status bar color -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+        <item name="titleMarginStart">48dp</item>
+        <item name="android:titleTextAppearance">@style/BarTitle</item>
     </style>
 
 </resources>

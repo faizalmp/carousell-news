@@ -18,6 +18,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "Carousell News"
+rootProject.name = "CarousellNews"
 include(":app")
+include(":data")
+include(":domain")

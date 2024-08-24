@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.onStart
 
 abstract class BaseInteractor<T: Any, P> {
 
-    protected abstract fun build(params: P): Flow<T>
+    abstract fun build(params: P): Flow<T>
 
     fun observe(
         params: P,

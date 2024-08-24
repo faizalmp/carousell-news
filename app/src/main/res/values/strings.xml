@@ -11,4 +11,6 @@
         Proin erat sem, faucibus eget dignissim nec, placerat ac arcu.
         Quisque a commodo ante. Duis lacinia ultricies dapibus.
     </string>
+    <string name="retry">Retry</string>
+    <string name="error_message">Something went wrong. Please retry.</string>
 </resources>

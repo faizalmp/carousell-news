@@ -30,6 +30,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+    testImplementation(libs.mockk)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
